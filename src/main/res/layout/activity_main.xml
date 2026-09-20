@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/viewFinder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+    </androidx.camera.view.PreviewView>
+
+    <RadioGroup
+        android:id="@+id/pixelsSearchRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        android:checkedButton="@id/radioButton_1x1"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/viewFinder"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButton_1x1"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:contentDescription="1"
+            android:text="1x1"
+            android:textColor="#F9F9F9"
+            android:textColorHighlight="#101010" />
+
+        <RadioButton
+            android:id="@+id/radioButton_3x3"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:checked="false"
+            android:contentDescription="3"
+            android:text="3x3"
+            android:textColor="#F9F9F9"
+            android:textColorHighlight="#101010" />
+
+        <RadioButton
+            android:id="@+id/radioButton_5x5"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:contentDescription="5"
+            android:text="5x5"
+            android:textColor="#F9F9F9"
+            android:textColorHighlight="#101010" />
+
+        <RadioButton
+            android:id="@+id/radioButton_15x15"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:contentDescription="15"
+            android:text="15x15"
+            android:textColor="#F9F9F9"
+            android:textColorHighlight="#101010" />
+
+    </RadioGroup>
+
+    <View
+        android:id="@+id/viewColor"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="250dp"
+        android:background="#FFFFFF"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewFinder" />
+
+    <TextView
+        android:id="@+id/textColor"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="36dp"
+        android:background="#000000"
+        android:clickable="true"
+        android:elevation="2dp"
+        android:text="@string/textColor"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/viewColor"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/viewColor"
+        app:layout_constraintTop_toBottomOf="@+id/viewColor"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:alpha="0.75"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/gallery_thumb"
+        tools:visibility="visible" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

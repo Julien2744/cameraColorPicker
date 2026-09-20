@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">cameraColorPicker</string>
+    <string name="textColor">#%1$s</string>
+</resources>
